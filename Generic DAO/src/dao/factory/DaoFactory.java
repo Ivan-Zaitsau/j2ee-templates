@@ -3,9 +3,9 @@ package dao.factory;
 import dao.EntityDao;
 
 /**
- * The Factory for Data Access Objects Strategy (Abstract Factory Pattern).
- * This factory produce DAOs such as <code>HibernateDaoFactory</code>.
- * 
+ * The Factory for Data Access Objects Strategy (Abstract Factory Pattern).<br>
+ * This factory produce Data Access Objects. See {@link HibernateDaoFactory} for example.
+ *
  * @author Ivan Zaitsau
  */
 public abstract class DaoFactory {

@@ -11,7 +11,7 @@ import org.hibernate.criterion.Restrictions;
 import dao.GenericDao;
 
 /**
- * The Hibernate implementation for generic Data Access Objects.
+ * The Hibernate implementation for generic Data Access Objects.<br>
  * It contains implementation for common generic functions.
  * 
  * @author Ivan Zaitsau

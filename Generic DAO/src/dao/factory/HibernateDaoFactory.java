@@ -4,6 +4,7 @@ import dao.EntityDao;
 import dao.hibernate.HibernateEntityDao;
 
 /**
+ * Hibernate-based implementation of {@link DaoFactory}
  * 
  * @author Ivan Zaitsau
  */

@@ -1,8 +1,5 @@
 package dao.util.hibernate;
 
-/**
- * @author Ivan Zaitsau
- */
 import java.util.Collection;
 
 import org.hibernate.NonUniqueResultException;
@@ -13,8 +10,9 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 
 /**
- *  Produce the <code>SessionFactory</code>. Set up the <code>SessionFactory</code> if it doesn't exist.
- *  The <code>Configuration</code> and <code>SessionFactory</code> are immutable.
+ * Contains Hibernate related helper-methods
+ * 
+ * @author Ivan Zaitsau
  */
 public final class HibernateHelper {
 
@@ -26,7 +24,7 @@ public final class HibernateHelper {
      * 
      * @return immutable <code>SessionFactory</code>
      */
-    public static SessionFactory getSessionFactory() {
+    public synchronized static SessionFactory getSessionFactory() {
 
         if (sessionFactory == null) {
             configureSessionFactory();
@@ -51,7 +49,8 @@ public final class HibernateHelper {
     
     /**
      * Returns current session associated with Hibernate working context.
-     * Note: the current context is a thread. 
+     * Note: the current context is a thread.
+     * 
      * @return immutable <code>Session</code>
      */
     public static Session getSession() {
@@ -77,8 +76,8 @@ public final class HibernateHelper {
     
     /**
      * Converts list to unique result (if applicable)
-     * @param
-     *     entities - list of entities
+     * 
+     * @param entities - list of entities
      * @return unique entity from the given list <br>or<br> null if list is empty 
      * @throws NonUniqueResultException if the given list contains two or more distinct elements
      */
