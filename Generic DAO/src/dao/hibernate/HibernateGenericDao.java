@@ -20,7 +20,7 @@ public abstract class HibernateGenericDao<E extends dao.Entity<PK>, PK extends S
 
 	@Override
 	@SuppressWarnings("unchecked")
-	public  PK create(E entity) {
+	public PK create(E entity) {
 		return (PK) getSession().save(entity);
 	}
 	
