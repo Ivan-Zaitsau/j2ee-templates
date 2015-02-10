@@ -13,7 +13,9 @@ public abstract class DaoFactory {
 	public static final int HIBERNATE = 1;
 	public static final int DEFAULT = HIBERNATE;
 	
-	private static DaoFactory HIBERNATE_DAO_FACTORY = new HibernateDaoFactory();
+	private static class Hibernate {
+		static DaoFactory HIBERNATE_DAO_FACTORY = new HibernateDaoFactory();
+	}
 
 	/**
 	 * This function produce default Data Access Objects Factory. For example <code>HibernateDaoFactory</code>.
@@ -31,7 +33,7 @@ public abstract class DaoFactory {
 	public static DaoFactory getInstance(int factoryType) {
 		switch (factoryType) {
 		case HIBERNATE:
-			return HIBERNATE_DAO_FACTORY;
+			return Hibernate.HIBERNATE_DAO_FACTORY;
 		default:
 			return null;
 		}
