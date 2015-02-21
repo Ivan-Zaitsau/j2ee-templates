@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import dao.util.hibernate.HibernateHelper;
 
 /**
- * Contains facade methods related to Hibernate Session
+ * Contains facade methods related to Hibernate Session.
  * 
  * @author Ivan Zaitsau
  */

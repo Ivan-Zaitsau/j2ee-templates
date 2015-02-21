@@ -9,7 +9,7 @@ import dao.Entity;
  * Hibernate-based implementation of {@link EntityDao} interface.
  * Contains methods common for all Hibernate entities.<br>
  * 
- * Can be used in case when the entity type is undefined, as a dispatcher, etc.
+ * Ought to be used in case when the entity type is undefined, as a dispatcher, etc.
  * 
  * @author Ivan Zaitsau
  */

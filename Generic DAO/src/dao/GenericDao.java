@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Root Entity Data Access Objects interface.
+ * Root Entity Data Access Objects interface.<br>
  * Provides definitions for all common Entity functions (CRUD functions).
  *
  * @param <E> generic Entity

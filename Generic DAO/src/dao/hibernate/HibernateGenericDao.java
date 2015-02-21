@@ -67,7 +67,7 @@ public abstract class HibernateGenericDao<E extends dao.Entity<PK>, PK extends S
 	/**
 	 * Create {@link Criteria} instance for the default entity class
 	 *
-	 * @return The criteria instance for manipulation and execution
+	 * @return Hibernate <tt>Criteria</tt> instance
 	 */
 	Criteria createCriteria() {
 		return getSession().createCriteria(getEntityClass());
